@@ -14,7 +14,7 @@ public class TestController : ControllerBase
     };
 
     [HttpGet(Name = "GetWeather")]
-    public IActionResult GetWeather(int userId, int cityId)
+    public IActionResult GetWeather([FromHeader]int userId,[FromQuery] int cityId)
     {
         switch (cityId)
         {
